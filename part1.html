@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Student Helper</title>
+    <link rel="stylesheet" href="part2.css">
+</head>
+<body>
+    <header>
+        <h1>JEE Student Helper</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#targets">Daily Targets</a></li>
+                <li><a href="#practice">Practice Zone</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#time-manager">Time Manager</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Track your overall progress and pending tasks.</p>
+            <div id="task-list">
+                <ul>
+                    <!-- Dynamic tasks will be added here -->
+                </ul>
+                <input type="text" id="new-task" placeholder="Enter a task">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+        </section>
+
+        <!-- Daily Targets Section -->
+        <section id="targets">
+            <h2>Daily Targets</h2>
+            <form id="target-form">
+                <input type="text" id="target-name" placeholder="Target Name">
+                <input type="number" id="target-hours" placeholder="Hours">
+                <button type="button" onclick="addTarget()">Set Target</button>
+            </form>
+            <ul id="targets-list"></ul>
+        </section>
+
+        <!-- Practice Zone Section -->
+        <section id="practice">
+            <h2>Practice Zone</h2>
+            <p>Practice previous year questions for JEE!</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+            <div id="quiz-section" style="display: none;">
+                <p id="question">Question will appear here</p>
+                <div id="options"></div>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section id="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-data">
+                    <!-- Dynamic leaderboard data -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Time Manager Section -->
+        <section id="time-manager">
+            <h2>Time Manager</h2>
+            <div>
+                <p id="timer-display">00:00</p>
+                <button onclick="startTimer()">Start Timer</button>
+                <button onclick="resetTimer()">Reset Timer</button>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics">
+            <h2>Analytics</h2>
+            <canvas id="analytics-chart"></canvas>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
